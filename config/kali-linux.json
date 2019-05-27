@@ -1,0 +1,28 @@
+{
+    "builders": [
+        {
+            "ami_name": "custom-kali-linux-{{timestamp}}",
+            "instance_type": "t2.medium",
+            "source_ami_filter": {
+                "filters": {
+                    "virtualization-type": "hvm",
+                    "name": "Kali Linux 2018.3*",
+                    "root-device-type": "ebs",
+                    "is-public": "true"
+                },
+                "owners": ["679593333241"],
+                "most_recent": true
+            },
+            "communicator": "ssh",
+            "ssh_username": "ec2-user",
+            "ssh_disable_agent_forwarding": "false",
+            "type": "amazon-ebs"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "config/kali-linux-setup.sh"
+        }
+    ]
+}
