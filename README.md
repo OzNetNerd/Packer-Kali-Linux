@@ -12,3 +12,8 @@ Run the following command:
 ```
 make build
 ```
+
+# RDP Credentials
+
+* Username: `root`
+* Password: `toor`
