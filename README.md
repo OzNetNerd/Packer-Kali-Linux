@@ -7,11 +7,24 @@ This script creates an up-to-date Kali Linux AMI with XRDP installed too.
 
 # Build
 
-Run the following command:
+1. Set up your AWS credentials in one of the following ways:
+	1. Set the `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` and `AWS_DEFAULT_REGION` environment variables.
+	2. Create an [AWS Named Profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html). You will need to configure a default profile or set the `AWS_DEFAULT_PROFILE` environment variable.
 
-```
-make build
-```
+2. Download Packer:
+
+    ```
+    cd /tmp
+    wget https://releases.hashicorp.com/packer/1.4.1/packer_1.4.1_linux_amd64.zip
+    unzip packer_1.4.1_linux_amd64.zip
+    sudo mv packer /usr/bin
+    ```        
+
+3. Run the following command:
+
+	```
+	make build
+	```
 
 # RDP Credentials
 
