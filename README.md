@@ -1,5 +1,7 @@
 # About
 
+[![Git](https://app.soluble.cloud/api/v1/public/badges/6cf62bb4-752c-4180-b100-a5df363648ec.svg?orgId=401166500955)](https://app.soluble.cloud/repos/details/github.com/oznetnerd/packer-kali-linux?orgId=401166500955)  
+
 Spinning up a fresh install of Kali Linux and then running `apt update && apt -y full-upgrade` can take 45+ minutes. 
 
 This script creates an up-to-date Kali Linux AMI with XRDP installed too.
